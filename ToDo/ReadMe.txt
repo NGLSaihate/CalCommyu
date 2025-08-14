@@ -1,0 +1,2 @@
+- Research Vignette effects on top of images/video containers/etc
+- Check if Smooth Scrolling works after publishing my website

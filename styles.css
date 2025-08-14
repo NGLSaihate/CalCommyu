@@ -1,0 +1,219 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar Styling */
+.navbar {
+  position: fixed;  /* Fix the navbar at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  backdrop-filter: blur(7px) contrast(1.2) saturate(1.3); /* Adds the blur effect */
+  -webkit-backdrop-filter: blur(7px) contrast(1.2) saturate(1.3); /* For Safari support */
+  z-index: 10;  /* Ensure navbar stays on top */
+  padding: 10px;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.3);  /* Add a shadow for visibility */
+}
+
+.navbar a {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;  /* Smooth transition for background color */
+}
+
+/* Navbar hover effect */
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.3);  /* Light highlight effect */
+  
+}
+
+.hero {
+	
+	overflow: hidden; /* Prevents background overflow */
+	background-image: url('assets/images/LuckyCatBGPattern.png');
+    background-size: 80px; /* Ensures the image covers the entire page */
+	background-attachment: fixed; /* Keeps the background image fixed when scrolling */
+    margin: 0; /* Removes default body margin */
+	animation: moveBackground 70s linear infinite;  /* Animation for moving background */
+    z-index: 0; /* Ensure the background is below other content */
+	
+	box-shadow: 0 30px 40px rgba(0, 0, 0, 0.7); /* Shadow effect */
+	
+    background-color: #2b294f;
+
+	
+	font-family: "Michroma", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #4CAF50;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* Content inside hero (text, buttons, etc.) */
+.hero-content {
+  position: relative; /* Makes sure content stays on top of the background */
+  z-index: 1; /* Stays on top of the moving background */
+  text-align: center;
+  color: white;
+  padding-top: 1%;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Background animation to move the image */
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0; /* Start position */
+  }
+  100% {
+    background-position: 100% 100%; /* End position (moving horizontally) */
+  }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1b1b1b;
+    color: #333;
+    margin: 0;
+    padding: 0;
+	
+	.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    width: 100%;
+	box-shadow: 0 30px 40px rgba(0, 0, 0, 0.7)
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+	
+	
+}
+
+img {
+	display: block;
+	margin: auto;
+	width: auto;
+    max-width: 100%; 
+    height: auto; 
+	padding: center;
+}
+
+
+h1 {
+	font-family: "Michroma", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    color: #4CAF50;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* Body content */
+
+   /* Styles for images in body content */
+.content img {
+ box-shadow: 0 30px 40px rgba(0, 0, 0, 0.7)
+
+ 
+}
+
+/* Styles for Paragraph styles in body content*/
+.content p {
+  font-family: "Michroma", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    text-align: center;
+    padding-top: 30px;	
+  font-size: 30px;
+  color: #717171;
+  overflow: hidden;
+}
+
+/* Style for the scroll-to-top button */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent; /* For future use, may change later */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow behind icon */
+    display: none; /* Initially hidden */
+}
+
+#scrollToTopBtn:hover {
+    background-color: rgba(0, 123, 255, 0.1); /* Light background on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* shadow on hover */
+}
+
+/* Haiki Icon for scroll button */
+#scrollIcon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain; /* Keep Aspect Ratio */
+}
+
+/* Events Grid Styles */
+
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
+    gap: 100px;
+    justify-items: center;
+}
+
+.video-item {
+    background: #a89f57;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Target iframe inside .video-item Styles in Events */
+.video-item iframe {
+    width: 512px;           /* Make iframe take up full width of its container */
+    height: 288px;         /* Set a specific height for the videos in the grid */
+
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+.description {
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Footer content */
+
+footer {
+	font-family: Arial, sans-serif;
+    color: #717171;
+    margin: 0;
+    padding: 30px;
+
+	background-color: #0f0f0f; /* Still thinking on how to style the footer */
+	
+}
