@@ -195,6 +195,16 @@ h1 {
     justify-items: center;
 }
 
+/* Overwrite grid to flex for lower resolutions*/
+@media screen and (max-width: 800px) {
+.video-grid {
+    display: flex;
+  flex-wrap: wrap;  /* Allow wrapping of video items */
+  gap: 100px;        /* Space between the videos */
+  justify-content: center; 
+  }
+}
+
 .video-item {
     background: #a89f57;
     border-radius: 50px;
@@ -234,4 +244,5 @@ footer {
 	
 
 }
+
 
