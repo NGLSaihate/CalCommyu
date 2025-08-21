@@ -64,6 +64,13 @@ html {
   line-height: 1.5;
 }
 
+/* Target images in Hero, specifically Cal Logo, alignment fix for low resolution displays*/
+@media screen and (max-width: 700px) {
+.hero-content  img {
+    margin-top: 100px;
+  }
+}
+
 /* Background animation to move the image */
 @keyframes moveBackground {
   0% {
@@ -227,3 +234,4 @@ footer {
 	
 
 }
+
